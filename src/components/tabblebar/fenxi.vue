@@ -2,6 +2,7 @@
     <div>
         <mt-header title="分析">
         </mt-header>
+
         <span class="text-effect">消费情况:</span> 
         <div class="bg" v-if="data1 && data1.length != 0 ?false:true"></div>
         <div id="main1"></div>
@@ -29,6 +30,7 @@ export default {
     
     },
     mounted() {
+        //获取消费数组和收入数组，循环数组创建一个新的数组，用来生成饼图
         var list1 =  this.$store.state.xiaofeilistAll;
         for(var i = 0;  i < list1.length; i ++ ) {
             this.data1.unshift( {value: parseInt(list1[i].jine), name: list1[i].leixing} )
@@ -95,7 +97,7 @@ export default {
         float: left;
         
     }
-    
+    /* 标题的颜色设置，还做了适配，有点丑，整个项目也就这一个适配。。。所以这个代码是我复制过来的 */
     .text-effect{
     display: block;
     margin-left:10px;

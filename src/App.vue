@@ -56,19 +56,13 @@ export default {
         reload() {
             location.reload()
         },
-        setlocal(string, list) {
-            localStorage.setItem(string, JSON.stringify(list));
-            console.log('存起来了');
-        },
-        // getLocal(string, list) {
-        //     var list = JSON.parse(localStorage.getItem(string) || '[]');
-        //     console.log('存起来啦啦');
+        // setlocal(string, list) {
+        //     localStorage.setItem(string, JSON.stringify(list));
+        //     console.log('存起来了');
         // },
+        
         jump() {
-            // if(!(this.firstcome instanceof Object)) {
-            //     window.location.href = '#/shouye'
-            //     console.log('firstcome存在');
-            // }
+            
             if(this.$route.path == '/guide') {
                 if(!(this.firstcome instanceof Object)) {
                 window.location.href = '#/shouye'
@@ -105,6 +99,7 @@ export default {
     body{
         margin:0px;
         padding-bottom: 55px;
+        font-family: Arial, Helvetica, sans-serif;
     }
     .tabbar{
         position: fixed;

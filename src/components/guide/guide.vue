@@ -5,12 +5,9 @@
           <mt-swipe-item class="bg2" ></mt-swipe-item>
           <mt-swipe-item class="bg3"></mt-swipe-item>
           <mt-swipe-item class="bg4" >
-            <!-- <router-link to="/shouye" class="button medium round blue btn-guide" href="javascript:void(0);" @click="enter">进入</router-link> -->
-            <!-- <a class="button medium round blue btn-guide" href="javascript:void(0);" @click="enter">进入</a> -->
-          <div @click="enter">
-            <router-link to="/shouye" class="button medium round blue btn-guide" href="javascript:void(0);">进入</router-link>
-                
-          </div>
+            <div @click="enter">
+              <router-link to="/shouye" class="button medium round blue btn-guide" href="javascript:void(0);">进入</router-link>
+            </div>
           </mt-swipe-item>
         </mt-swipe>
 
@@ -81,7 +78,6 @@ export default {
         left:50%;
         top:58%;
         color: #fff;
-        /* transform: translateY(50%); */
         z-index:9;
     }
 </style>

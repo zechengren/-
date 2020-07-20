@@ -1,5 +1,4 @@
 import VueRouter from 'vue-router'
-// Vue.use(VueRouter);
 
 import showYe from './components/tabblebar/shouye.vue'
 import jiZhang from './components/tabblebar/jizhang.vue'
@@ -8,7 +7,6 @@ import fenXi from './components/tabblebar/fenxi.vue'
 import xiaoFei from './components/jizhang/xiaofei.vue'
 import shouRu from './components/jizhang/shouru.vue'
 import guide from './components/guide/guide.vue'
-
 
 
 var router = new VueRouter({
@@ -23,7 +21,6 @@ var router = new VueRouter({
         { path: '/guide', component: guide}
 
     ],
-    // linkActiveClass: 'is-selected'
 })
 
 export default router;

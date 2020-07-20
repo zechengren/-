@@ -1,20 +1,23 @@
 <template>
     <div>
+      <!-- 头部 -->
         <mt-header title="消费">
           <router-link to="/jizhang" slot="left">
             <mt-button icon="back">返回</mt-button>
           </router-link>
         </mt-header>
+
+        <!-- 内容 -->
         <div class="box">
-            <div class="row" >
-              <label for=""><i class="ico1 iconfont icon-qc-required"></i>日期：</label> 
-              <span class="data1" v-for="item in timeList" ref="riqi">{{item.year}}-{{item.month}}-{{item.date}} </span>
-            </div>
+          <div class="row" >
+            <label for=""><i class="ico1 iconfont icon-qc-required"></i>日期：</label> 
+            <span class="data1" v-for="item in timeList" ref="riqi" :key="item.id">{{item.year}}-{{item.month}}-{{item.date}} </span>
+          </div>
         </div>
         <div class="box">
             <div class="row">
               <label for=""><i class="ico1 iconfont icon-qc-required"></i>时间：</label> 
-              <span class="data1" v-for="item in timeList" ref="shijian">{{item.hours}}:{{item.minutes}} </span>
+              <span class="data1" v-for="item in timeList" ref="shijian" :key="item.id">{{item.hours}}:{{item.minutes}} </span>
             </div>
         </div>
         <div class="box">
@@ -47,9 +50,7 @@
         </div>
         <div class="btn-father">
         <a class="button medium regular orange" href="javascript:void(0);" @click="sure">确认</a>
-
         </div>
-        
     </div>
 </template>
 <script>
@@ -139,7 +140,7 @@ export default {
               localStorage.setItem('listAll', JSON.stringify(this.$store.state.listAll));
               localStorage.setItem('xiaofeilistAll', JSON.stringify(this.$store.state.xiaofeilistAll));
               //回到。。。
-              window.location.href = '/'
+              window.location.href = '#/shouye'
             } else {
               Toast({
                   message: '请输入正确金额',
@@ -241,4 +242,5 @@ export default {
     .sel{
         width: 110px;
     }
+    
 </style>

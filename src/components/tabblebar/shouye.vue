@@ -3,7 +3,6 @@
       <div class="head"></div>
       <div class="bg" >
         <span class="yve">可用余额</span>
-        <!-- <countTo :startVal='$store.state.startVal' :endVal='$store.state.endVal' :duration='3000' class="count" suffix="元" :useEasing="false" :autoplay="true"></countTo> -->
         <countTo :startVal='start' :endVal='end' :duration='3000' class="count" suffix="元"></countTo>
         
       </div>

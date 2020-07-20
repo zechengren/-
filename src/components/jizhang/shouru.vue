@@ -8,13 +8,13 @@
         <div class="box">
             <div class="row" >
               <label for=""><i class="ico1 iconfont icon-qc-required"></i>日期：</label> 
-              <span class="data1" v-for="item in timeList" ref="riqi">{{item.year}}-{{item.month}}-{{item.date}} </span>
+              <span class="data1" v-for="item in timeList" ref="riqi" :key="item.id">{{item.year}}-{{item.month}}-{{item.date}} </span>
             </div>
         </div>
         <div class="box">
             <div class="row">
               <label for=""><i class="ico1 iconfont icon-qc-required"></i>时间：</label> 
-              <span class="data1" v-for="item in timeList" ref="shijian">{{item.hours}}:{{item.minutes}} </span>
+              <span class="data1" v-for="item in timeList" ref="shijian" :key="item.id">{{item.hours}}:{{item.minutes}} </span>
             </div>
         </div>
         <div class="box">
@@ -125,7 +125,7 @@ export default {
               localStorage.setItem('listAll', JSON.stringify(this.$store.state.listAll));
               localStorage.setItem('shourulistAll', JSON.stringify(this.$store.state.shourulistAll));
               //回到。。。
-              window.location.href = '/'
+              window.location.href = '#/shouye'
             } else {
               Toast({
                   message: '请输入正确金额',
